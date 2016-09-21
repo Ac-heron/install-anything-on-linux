@@ -5,6 +5,7 @@
 - 下载JDK: wget http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-i586.tar.gz
 - 解压： tar -zxvf jdk-8u60-linux-i586.tar.gz
 - 配置环境变量： vim /etc/profile
+
   ```
   JAVA_HOME=/usr/local/program/jdk1.8.0_72
   JRE_HOME=$JAVA_HOME/jre
