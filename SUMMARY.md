@@ -8,7 +8,7 @@
    * [在linux上安装maven](install_maven_on_linux.md)
    * [在linux上安装tomcat](install_tomcat_on_linux.md)
    * [在linux上安装redis](install_redis_on_linux.md)
-   * 在linux上安装mysql
+   * [在linux上安装mysql](install_mysql_on_linux.md)
 * [上网软件的安装](install-internet-tools.md)
    * 网易云音乐的安装
 
