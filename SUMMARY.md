@@ -5,7 +5,7 @@
 * [开发工具的安装](install-development-tools.md)
    * [在linux上安装JDK](install-jdk-on-linux.md)
    * [在linux上安装nodejs](install-nodejs-on-linux.md)
-   * 在linux上安装maven
+   * [在linux上安装maven](install_maven_on_linux.md)
 * [上网软件的安装](install-internet-tools.md)
    * 网易云音乐的安装
 
