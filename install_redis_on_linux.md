@@ -20,7 +20,7 @@
     客户端：src/redis-cls
     默认配置文件：redis.conf
     ```
-   - 然后将可执行文件放置在$PATH环境目录下，便于以后执行程序时可以不用输入完整的路径
+   - 然后将可执行文件放置在$PATH环境目录下，便于以后执行程序时可以不用输入完整的路径:
      
      ```
      cp redis-server /usr/local/bin/
