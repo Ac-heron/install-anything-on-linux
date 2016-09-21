@@ -1,7 +1,7 @@
 # 在linux上安装JDK
 
 - 查看是否安装： java -version
-- 官网地址： http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+- 官网地址：http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 - 下载JDK: wget http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-i586.tar.gz
 - 解压： tar -zxvf jdk-8u60-linux-i586.tar.gz
 - 配置环境变量： vim /etc/profile
