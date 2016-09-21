@@ -7,7 +7,7 @@
 - [在linux上安装nodejs](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_nodejs_on_linux.md)
 - [在linux上安装maven](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_maven_on_linux.md)
 - [在linux上安装tomcat](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_tomcat_on_linux.md)
-- []()
+- [在linux上安装redis](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_redis_on_linux.md)
 - []()
 - []()
 - []()
