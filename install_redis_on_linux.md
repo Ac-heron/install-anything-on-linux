@@ -27,9 +27,9 @@
      cp redis-cli /usr/local/bin/
      ```
   
-  - 启动Redis-server:redis-server
-  - 可以重开一个终端，查看redis进程：ps aux | grep redis
-  - 或者检查redis服务器状态： netstat -nlt | grep 6379
-  - 启动Redis-client：redis-cli
+   - 启动Redis-server:redis-server
+   - 可以重开一个终端，查看redis进程：ps aux | grep redis
+   - 或者检查redis服务器状态： netstat -nlt | grep 6379
+   - 启动Redis-client：redis-cli
 
 ## redis高级使用
