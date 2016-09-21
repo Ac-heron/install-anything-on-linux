@@ -1,2 +1,2 @@
-# JDK的安装
+# 在linux上安装JDK
 
