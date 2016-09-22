@@ -97,7 +97,7 @@ Jenkins启动成功后，在`C:\Users\username\`下会有一个`.jenkins`文件�
 ![构建历史](https://github.com/Ac-heron/myblogs/blob/master/images/helloJenkins_buildhistory.png)
 
 点击某个构建版本，进入可查看详细的构建结果
-![控制台输出](https://github.com/Ac-heron/myblogs/blob/master/images/helloJenkins_buildhistory.png)
+![控制台输出](https://github.com/Ac-heron/myblogs/blob/master/images/helloJenkins_consoleoutput.png)
 如果构建成功，则在项目目录下会发现多出一个target目录(编译目录设为此目录),其中会有maven`clean package`命令生成的war包。
 
 ---
