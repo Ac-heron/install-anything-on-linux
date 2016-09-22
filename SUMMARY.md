@@ -12,7 +12,7 @@
    * [在linux上安装tmux](install_tmux_on_linux.md)
    * [在linux上安装jenkins](install_jenkins_on_linux.md)
    * [在linux上安装nexus](install_nexus_on_linux.md)
-   * 在linux上安装svn
+   * [在linux上安装svn](install_svn_on_linux.md)
    * 在linux上安装nginx
 * [上网软件的安装](install-internet-tools.md)
    * 网易云音乐的安装
