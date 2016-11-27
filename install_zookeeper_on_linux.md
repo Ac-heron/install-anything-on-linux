@@ -66,21 +66,28 @@ Keeper JMX enabled by default
   ```
 
 - 查看节点：
+
   ```
   [zk: 127.0.0.1:2181(CONNECTED) 0] ls /
   [zookeeper]
   ```
+
 - 创建新节点，并关联到字符串`my_data`:
+
   ```
   [zk: 127.0.0.1:2181(CONNECTED) 1] create /zk_test my_data
   Created /zk_test
   ```
+
 - 运行查看节点命令查看效果: ls /
+
   ```
   [zk: 127.0.0.1:2181(CONNECTED) 0] ls /
   [zookeeper, zk_test]
   ```
+
 - 查看节点数据：get /zk_test
+
   ```
     [zk: 127.0.0.1:2181(CONNECTED) 1]  get /zk_test
     my_data
@@ -96,7 +103,9 @@ Keeper JMX enabled by default
     dataLength = 7
     numChildren = 0
   ```
+
 - 更新数据：set /zk_test junk
+
   ```
     [zk: 127.0.0.1:2181(CONNECTED) 2] set /zk_test junk
     cZxid = 0x4
@@ -124,7 +133,9 @@ Keeper JMX enabled by default
     dataLength = 4
     numChildren = 0
   ```
+
 - 删除节点：delete /zk_test
+
   ```
   [zk: 127.0.0.1:2181(CONNECTED) 4] delete /zk_test
   [zk: 127.0.0.1:2181(CONNECTED) 5] ls /

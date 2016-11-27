@@ -4,13 +4,14 @@
 
 
 
-- [在linux上安装JDK](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_jdk_on_linux.md)
-- [在linux上安装nodejs](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_nodejs_on_linux.md)
-- [在linux上安装maven](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_maven_on_linux.md)
-- [在linux上安装tomcat](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_tomcat_on_linux.md)
-- [在linux上安装redis](https://github.com/Ac-heron/install-anything-on-linux/blob/master/install_redis_on_linux.md)
+- [在linux上安装JDK](./install_jdk_on_linux.md)
+- [在linux上安装nodejs](./install_nodejs_on_linux.md)
+- [在linux上安装maven](./install_maven_on_linux.md)
+- [在linux上安装tomcat](./install_tomcat_on_linux.md)
+- [在linux上安装redis](./install_redis_on_linux.md)
 - [在linux上安装zookeeper](./install_zookeeper_on_linux.md)
-- []()
-- []()
-- []()
-- 
+- [在linux上安装jenkins](./install_jenkins_on_linux.md)
+- [在linux上安装mysql](./install_mysql_on_linux.md)
+- [在linux上安装nexus](./install_nexus_on_linux.md)
+- [在linux上安装tmux](./install_tmux_on_linux.md)
+- [在linux上安装svn](./install_svn_on_linux.md) 
