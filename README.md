@@ -16,5 +16,6 @@
 - [在linux上安装nexus](./install_nexus_on_linux.md)
 - [在linux上安装tmux](./install_tmux_on_linux.md)
 - [在linux上安装svn](./install_svn_on_linux.md) 
+- [在linux上安装docker](./install_docker_on_linux.md)
 
 ## 上网相关
