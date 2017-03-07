@@ -18,6 +18,6 @@
 - [在linux上安装svn](./install_svn_on_linux.md) 
 - [在linux上安装docker](./install_docker_on_linux.md)
 - [在linux上安装jmeter](./install_jmeter_on_linux.md)
-- [在linux上安装nginx](./tall_nginx_on_linux.md)
+- [在linux上安装nginx](./install_nginx_on_linux.md)
 
 ## 上网相关
