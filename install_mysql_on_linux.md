@@ -3,13 +3,13 @@
 
 ## apt-get 安装
 
-   - 参考资料：http://wiki.ubuntu.org.cn/MySQL
+-  参考资料：http://wiki.ubuntu.org.cn/MySQL
 
-   - 安装 ：mysql数据库分服务器和客户端，服务器用于管理和维护数据库，客户端用于连接和访问数据库，可以用下列命令安装服务器和客户端。安装期间将会提示输入数据库管理员root的密码:
-    
-    ```
-    sudo apt-get install mysql-server
-    ```
+-  安装 ：mysql数据库分服务器和客户端，服务器用于管理和维护数据库，客户端用于连接和访问数据库，可以用下列命令安装服务器和客户端。安装期间将会提示输入数据库管理员root的密码:
+
+     ```
+     sudo apt-get install mysql-server
+     ```
    - mysql的配置文件是/etc/mysql/my.cnf,主要用于配置数据库文件的存储位置，日志文件等，修改my.cnf必须重启mysql
 
    - 安装完成后，mysql应该已经启动，可以用如下命令检查mysql是否运行：sudo netstat -tap | grep mysql
@@ -20,8 +20,8 @@
 
 ## mysql常用命令
 
-   - 查看版本信息： mysql -V
-   - 启动mysqld服务: sudo /etc/init.d/mysql start
+- 查看版本信息： mysql -V
+- 启动mysqld服务: sudo /etc/init.d/mysql start
    - 停止mysqld服务: sudo /etc/init.d/mysql stop
    - 启动mysqld服务: sudo /etc/init.d/mysql restart
    - SELECT VERSION(); MYSQL 版本
@@ -86,43 +86,139 @@ source test.sql;
 
 ## 安装navicat客户端
 
-   - 下载：https://www.navicat.com.cn/download/navicat-for-mysql
-   - 解压：sudo tar -zxvf navicat112_mysql_cs_x86.tar.gz
+- 下载：https://www.navicat.com.cn/download/navicat-for-mysql
+- 解压：sudo tar -zxvf navicat112_mysql_cs_x86.tar.gz
    - 进入解压目录 ：cd navicat112_mysql_cs_x86
    - 运行：./start_navicat**
 
 ## 卸载mysql
 
-- 删除mysql：
+-   删除mysql：
 
     - sudo apt-get remove mysql-server
     - sudo apt-get autoremove mysql-server
     - sudo apt-get remove mysql-common
 
-- 清理残留数据：
-    
-    ```
-    dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
-    ```
+-   清理残留数据：
 
-## 源码安装（未完成）
+      ```
+      dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+      ```
 
-   - 官网下载：http://dev.mysql.com/downloads/mysql/
-   - Mysql 5.6 下载：wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.29.tar.gz （大小：31 M）
+## 源码安装（centos为例）
+
+- 官网下载：http://dev.mysql.com/downloads/mysql/
+- Mysql 5.6 下载：wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.29.tar.gz （大小：31 M）
 
    - Mysql 5.7 下载：wget http://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.11.tar.gz （大小：47 M）
-
    - 解压：tar -zxvf mysql-5.6.29.tar.gz
    - 进入解压目录 ：cd mysql-5.6.29
-   - 生成安装目录 ：mkdir -p /usr/local/program/mysql/data
-   - 在编译时，需要用到cmake，如果没有安装，要先安装cmake：`apt-get install cmake`
-       - cmake依赖其它包，也一并安装
-
-   - 生成配置：
+   - 生成安装目录 ：mkdir -p /usr/local/mysql/data
+   - 安装依赖包、编译包（centos）：`yum install -y make gcc-c++ cmake bison-devel ncurses-devel`
+   - 在编译时，需要用到cmake，如果没有安装，要先安装cmake命令及cmake依赖包
+   - 运行cmake命令，生成配置：
 
  ```
- cmake -DCMAKE_INSTALL_PREFIX=/usr/local/program/mysql -DMYSQL_DATADIR=/usr/local/program/mysql/data -DMYSQL_UNIX_ADDR=/tmp/mysql.sock -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DWITH_EXTRA_CHARSETS:STRING=utf8 -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DENABLED_LOCAL_INFILE=1
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DMYSQL_DATADIR=/usr/local/mysql/data \
+-DSYSCONFDIR=/etc \
+-DMYSQL_USER=mysql \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_ARCHIVE_STORAGE_ENGINE=1 \
+-DWITH_READLINE=1 \
+-DMYSQL_UNIX_ADDR=/usr/local/mysql/data/mysql.sock \
+-DMYSQL_TCP_PORT=3306 \
+-DENABLED_LOCAL_INFILE=1 \
+-DENABLED_DOWNLOADS=1 \
+-DWITH_PARTITION_STORAGE_ENGINE=1 \
+-DEXTRA_CHARSETS=all \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DWITH_DEBUG=0 \
+-DMYSQL_MAINTAINER_MODE=1 \
+-DWITH_SSL:STRING=bundled \
+-DWITH_ZLIB:STRING=bundled \
+-DDOWNLOAD_BOOST=1 \
+-DWITH_BOOST=/usr/share/doc/boost-doc-1.41.0/
+ ```
+
+
+
+- make命令编译（此过程较长）：make
+
+- 安装：make install
+
+- 配置开机启动：
+
+  `cp /mysql-5.6.19/support-files/mysql.server /etc/init.d/mysql`
+
+  `chmod 755 /etc/init.d/mysql`
+
+  `chkconfig mysql on`
+
+- 复制一份配置文件： `cp /support-files/my-default.cnf /etc/my.cnf`
+
+- 添加组和用户及安装目录权限
+
+  添加组：groupadd mysql
+
+  创建用户mysql并加入到mysql组，不允许mysql用户直接登录系统：useradd -g mysql mysql -s /bin/false
+
+  设置MySQL数据库目录权限：chown -R mysql:mysql /usr/program/mysql/data
+
+- 初始化数据库：`/usr/local/mysql/scripts/mysql_install_db --basedir=/usr/mysql --datadir=/usr/mysql/data --skip-name-resolve --user=mysql`
+
+- 禁用 selinux编辑配置文件：`vim /etc/selinux/config`把 `SELINUX=enforcing` 改为 `SELINUX=disabled`
+
+- 常用命令软连接，才可以在终端直接使用：mysql 和 mysqladmin 命令
+
+  ln -s /usr/mysql/bin/mysql /usr/bin 
+
+  ln -s /usr/mysql/bin/mysqladmin /usr/bin
+
+  ln -s /usr/mysql/bin/mysqldump /usr/bin
+
+  ln -s /usr/mysql/bin/mysqlslap /usr/bin
+
+
+
+
+
+# 在Mac上安装mysql
+
+- 下载：https://dev.mysql.com/downloads/mysql/
+
+   我下载的是**Mac OS X 10.12 (x86, 64-bit), DMG Archive**
+
+- 双击运行安装
+
+- 安装过程中，mysql会给root设置一个随机的密码，记住它。
+
+- 安装完成后，启动
+
+- 用上面的密码登录：/usr/local/mysql/bin mysql -uroot -p
+
+- 登录后，雪行任何命令都会报如下错误：
+
+  ```
+  You must reset your password using ALTER USER statement before executing this statement.
+  ```
+
+- 修改密码：mysql> SET PASSWORD = PASSWORD("新密码");
+
+### mac卸载mysql：
+
 ```
-   
-   ----此步报错----
+mysql 终端卸载：
+1 sudo rm /usr/local/mysql
+2 sudo rm -rf /usr/local/mysql*
+3 sudo rm -rf /Library/StartupItems/MySQLCOM
+4 sudo rm -rf /Library/PreferencePanes/My*
+5 vim /etc/hostconfig  (and removed the line MYSQLCOM=-YES-)
+6 rm -rf ~/Library/PreferencePanes/My*
+7 sudo rm -rf /Library/Receipts/mysql*
+8 sudo rm -rf /Library/Receipts/MySQL*
+9 sudo rm -rf /var/db/receipts/com.mysql.*
+```
 
