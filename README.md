@@ -16,9 +16,11 @@
 - [在linux上安装nexus](./install_nexus_on_linux.md)
 - [在linux上安装tmux](./install_tmux_on_linux.md)
 - [在linux上安装svn](./install_svn_on_linux.md) 
+- [在linux上安装node](./install_nodejs_on_linux.md) 
 - [在linux上安装docker](./install_docker_on_linux.md)
 - [在linux上安装jmeter](./install_jmeter_on_linux.md)
 - [在linux上安装nginx](./install_nginx_on_linux.md)
-- [在linux上安装mongodb](./install_mongodb_on_linux.md)
+- [在linux上安装MongoDB](./install_mongodb_on_linux.md)
+- [在linux上安装Elasticsearch](./install_elasticearch_on_linux.md)
 
 ## 上网相关
