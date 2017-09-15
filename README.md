@@ -19,5 +19,6 @@
 - [在linux上安装docker](./install_docker_on_linux.md)
 - [在linux上安装jmeter](./install_jmeter_on_linux.md)
 - [在linux上安装nginx](./install_nginx_on_linux.md)
+- [在linux上安装mongodb](./install_mongodb_on_linux.md)
 
 ## 上网相关
