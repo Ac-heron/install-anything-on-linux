@@ -21,19 +21,19 @@
         ~$ cd graylog-2.3.1
       ```
     - 拷贝配置文件：cp graylog.conf.example /etc/graylog/server/server.conf
-      或者修改bin/graylogctl中的配置文件地址:
-        ```
-        cp graylog.conf.example graylog.conf
-        第50行/Users/acheron/Downloads/graylog/graylog-2.3.1/graylog.conf
-        ```
+
 ### 必须要修改的配置:
+vim /etc/graylog/server/graylog.conf
 
-- password_secret
-You must set a secret that is used for password encryption and salting here. The server will refuse to start if it’s not set. Generate a secret with for example pwgen -N 1 -s 96. If you run multiple graylog-server nodes, make sure you use the same password_secret for all of them!
+    - password_secret
+    You must set a secret that is used for password encryption and salting here. The server will refuse to start if it’s not set. Generate a secret with for example pwgen -N 1 -s 96. If you run multiple graylog-server nodes, make sure you use the same password_secret for all of them!
 
 
 
+### 启动
+- 启动：./bin/graylogctl run
 
+- 启动日志见：log/graylog-server.log
 
 
 http://www.imooc.com/article/13481
