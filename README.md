@@ -22,5 +22,6 @@
 - [在linux上安装nginx](./install_nginx_on_linux.md)
 - [在linux上安装MongoDB](./install_mongodb_on_linux.md)
 - [在linux上安装Elasticsearch](./install_elasticearch_on_linux.md)
+- [在linux上安装GrayLog](./install_graylog_on_linux.md)
 
 ## 上网相关

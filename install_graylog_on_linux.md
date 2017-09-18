@@ -1,6 +1,11 @@
 
 # 在linux上安装Graylog
 
+在安装之前，确保已安装mongodb和elasticsearch
+见：
+- [在linux上安装MongoDB](./install_mongodb_on_linux.md)
+- [在linux上安装Elasticsearch](./install_elasticearch_on_linux.md) 
+
    - 官网： https://www.graylog.org/
 
    - System requirements
