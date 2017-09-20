@@ -32,19 +32,18 @@ vim /etc/graylog/server/graylog.conf
 
     - password_secret
     You must set a secret that is used for password encryption and salting here. The server will refuse to start if it’s not set. Generate a secret with for example pwgen -N 1 -s 96. If you run multiple graylog-server nodes, make sure you use the same password_secret for all of them!
+    ```
+    pwgen安装（mac）：brew install pwgen
+    生成密钥：pwgen -N 1 -s 96
+    将生成的密钥设置到password_secret处
+    ```
+
 
     - root_password_sha2
     初始化登录的时候要有一个密码，用命令生成'echo -n yourpassword | shasum -a 256',用户名是admin.
     比如我这里生成密码123456:`echo -n 123456 | shasum -a 256`,将生成的密码i`8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92`配置到配置文件中。
 
-    - elasticsearch_shards = 4
-    The number of shards for your indices. A good setting here highly depends on the number of nodes in your Elasticsearch cluster. If you have one node, set it to 1.
-
-    - elasticsearch_replicas = 0
-    The number of replicas for your indices. A good setting here highly depends on the number of nodes in your Elasticsearch cluster. If you have one node, set it to 0.
-
-    - mongodb_uri
-    Enter your MongoDB connection and authentication information here.
+    - 其它要改的参考官网
 
 ### 启动
 - 启动：./bin/graylogctl run
