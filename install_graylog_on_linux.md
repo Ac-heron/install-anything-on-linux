@@ -50,7 +50,13 @@ vim /etc/graylog/server/graylog.conf
 
 - 启动日志见：log/graylog-server.log
 
+- 测试日志是否成功：
+    -   登录后System->Inputs
+    -   Launch a new Raw/Plaintext UDP input
+    -   listening on 127.0.0.1 on port 5555
+    -   终端运行：echo "Hello Graylog, let's be friends." | nc -w 1 -u 127.0.0.1 5555
+    -   Now search for friends using the search bar on the top and you should already see the message you just sent in. Click on it in the table and see it in detail:
+ 
 
-http://www.imooc.com/article/13481
-
+## 参考：
 http://docs.graylog.org/en/2.3/pages/installation/manual_setup.html
