@@ -43,6 +43,11 @@ vim /etc/graylog/server/graylog.conf
     初始化登录的时候要有一个密码，用命令生成'echo -n yourpassword | shasum -a 256',用户名是admin.
     比如我这里生成密码123456:`echo -n 123456 | shasum -a 256`,将生成的密码i`8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92`配置到配置文件中。
 
+    - elasticsearch_shards = 1
+    由于我们只有一个Elasticsearch shard，需要把elasticsearch_shards参数设置为1.
+
+
+
     - 其它要改的参考官网
 
 ### 启动
@@ -60,3 +65,4 @@ vim /etc/graylog/server/graylog.conf
 
 ## 参考：
 http://docs.graylog.org/en/2.3/pages/installation/manual_setup.html
+http://blog.topspeedsnail.com/archives/4066
