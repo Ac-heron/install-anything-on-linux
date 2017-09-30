@@ -29,5 +29,6 @@
 - [在linux上安装canal](https://github.com/Ac-heron/myblogs/blob/master/2017/%E5%88%A9%E7%94%A8canal%E5%AE%9E%E7%8E%B0mysql%E5%90%8C%E6%AD%A5%E5%88%B0redis.md)
 - [在linux上安装Apollo](https://github.com/Ac-heron/myblogs/blob/master/2017/%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0Apollo%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97.md)
 - [在linux上安装Phabricator](https://github.com/Ac-heron/myblogs/blob/master/2017/CodeReview%E5%B7%A5%E5%85%B7Phabricator%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8.md)
+- [在linux上安装gatling](./install_gatling_on_linux.md)
 
 ## 上网相关
