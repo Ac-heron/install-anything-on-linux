@@ -7,6 +7,7 @@
 - 用sudo创建默认的数据目录：sudo mkdir -p /data/db
    这里的数据储存目录也可以在其它目录，只不过在启动时要加参数dbpath指向你创建的目录 :mongod --dbpath <path to data directory>
 - 给/data/db赋权：sudo chown `id -u` /data/db
+ 或sudo chmod 777 /data/db
 - 启动：./bin/mongod
   加dbpath的：./bin/mongod --dbpath /Users/acheron/Tmp/mongodb-data
 - 命令连接：./bin/mongo
